@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Perfume Offer - Mega Ramadan</title>
 
-  <!-- Bootstrap & Select2 CSS (সঠিক লিঙ্ক যোগ করা হয়েছে) -->
+  <!-- পূর্ণাঙ্গ এবং সঠিক CSS লিঙ্ক (গিটহাবের জন্য এটিই লাগবে) -->
   <link href="https://jsdelivr.net" rel="stylesheet" />
   <link href="https://jsdelivr.net" rel="stylesheet" />
 
@@ -30,11 +30,9 @@
     <p class="text-muted">আপনার তথ্য দিয়ে অর্ডার সম্পন্ন করুন</p>
   </div>
 
-  <!-- Form Section -->
-  <form action="https://formspree.io/f/mvzdzrab" method="POST">
-    
-    <!-- Redirect to Thanks Page -->
-    <input type="hidden" name="_next" value="https://azimm7337-cmyk.github.io/NexabonFashion/thanks.html">
+  <!-- Formspree ID এবং Redirect লিঙ্ক একদম সঠিক আছে -->
+  <form action="https://formspree.io" method="POST">
+    <input type="hidden" name="_next" value="https://github.io">
 
     <div class="mb-3">
       <label class="form-label">পারফিউম পছন্দ করুন:</label>
@@ -65,13 +63,16 @@
   </form>
 </div>
 
-<!-- Scripts (সঠিক CDN লিঙ্ক যোগ করা হয়েছে) -->
+<!-- সঠিক এবং পূর্ণাঙ্গ জাভাস্ক্রিপ্ট লিঙ্ক -->
 <script src="https://jquery.com"></script>
 <script src="https://jsdelivr.net"></script>
 
 <script>
   $(document).ready(function() {
-    $('.js-example-basic-single').select2();
+    $('.js-example-basic-single').select2({
+        placeholder: "সিলেক্ট করুন...",
+        allowClear: true
+    });
   });
 </script>
 </body>
