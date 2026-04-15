@@ -31,11 +31,14 @@
     <p class="text-muted">আপনার তথ্য দিয়ে অর্ডার সম্পন্ন করুন</p>
   </div>
 
-  <!-- Formspree Action লিঙ্কটি এখানে বসান -->
-  <form action="https://formspree.io/f/mvzdzrab" method="POST">
-    
-    <!-- ধন্যবাদ পেজে পাঠানোর জন্য (thanks.html ফাইলটি একই ফোল্ডারে থাকতে হবে) -->
-    <input type="hidden" name="_next" value="thanks.html">
+  <<form action="https://formspree.io" method="POST">
+  
+  <!-- এই লাইনটি কাস্টমারকে thanks.html পেজে পাঠাবে -->
+  <input type="hidden" name="_next" value="https://azimm7337-cmyk.github.io/NexabonFashion/thanks.html">
+
+  <!-- বাকি ইনপুটগুলো আগের মতোই থাকবে -->
+  <button type="submit">অর্ডার কনফার্ম করুন</button>
+</form>
 
     <div class="mb-3">
       <label class="form-label">পারফিউম পছন্দ করুন:</label>
