@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Perfume Offer - Mega Ramadan</title>
 
-  <!-- Bootstrap & Select2 CSS -->
+  <!-- Bootstrap & Select2 CSS (সঠিক লিঙ্ক যোগ করা হয়েছে) -->
   <link href="https://jsdelivr.net" rel="stylesheet" />
   <link href="https://jsdelivr.net" rel="stylesheet" />
 
   <style>
-    /* আপনার দেওয়া সেই অরিজিনাল Select2 স্টাইল */
     .select2-container{box-sizing:border-box;display:inline-block;margin:0;position:relative;vertical-align:middle}.select2-container .select2-selection--single{box-sizing:border-box;cursor:pointer;display:block;height:45px;user-select:none;-webkit-user-select:none}.select2-container .select2-selection--single .select2-selection__rendered{display:block;padding-left:12px;line-height:42px;color:#444;}.select2-container--default .select2-selection--single{background-color:#fff;border:1px solid #ddd;border-radius:8px}
     
     body { background-color: #f4f7f6; font-family: 'Segoe UI', sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
@@ -31,14 +30,11 @@
     <p class="text-muted">আপনার তথ্য দিয়ে অর্ডার সম্পন্ন করুন</p>
   </div>
 
-  <<form action="https://formspree.io/f/mvzdzrab" method="POST">
-  
-  <!-- এই লাইনটি কাস্টমারকে thanks.html পেজে পাঠাবে -->
-  <input type="hidden" name="_next" value="https://azimm7337-cmyk.github.io/NexabonFashion/thanks.html">
-
-  <!-- বাকি ইনপুটগুলো আগের মতোই থাকবে -->
-  <button type="submit">অর্ডার কনফার্ম করুন</button>
-</form>
+  <!-- Form Section -->
+  <form action="https://formspree.io/f/mvzdzrab" method="POST">
+    
+    <!-- Redirect to Thanks Page -->
+    <input type="hidden" name="_next" value="https://azimm7337-cmyk.github.io/NexabonFashion/thanks.html">
 
     <div class="mb-3">
       <label class="form-label">পারফিউম পছন্দ করুন:</label>
@@ -65,12 +61,14 @@
       <textarea name="Shipping_Address" class="form-control" rows="3" placeholder="পূর্ণ ঠিকানা লিখুন" required></textarea>
     </div>
 
-    <button type="submit" class="btn-submit">অর্ডার কনফার্ম করুন</button>
+    <button type="submit" class="btn-submit w-100">অর্ডার কনফার্ম করুন</button>
   </form>
 </div>
 
+<!-- Scripts (সঠিক CDN লিঙ্ক যোগ করা হয়েছে) -->
 <script src="https://jquery.com"></script>
 <script src="https://jsdelivr.net"></script>
+
 <script>
   $(document).ready(function() {
     $('.js-example-basic-single').select2();
