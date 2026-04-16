@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexabonfashion | Premium Lifestyle</title>
+    
+    <!-- Corrected Scripts & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <style>
+        @import url('https://googleapis.com');
+        
+        :root {
+            --bg-color: #fdfbf7; /* Miswan-এর সিগনেচার অফ-হোয়াইট */
+            --accent-color: #c4a484; /* লাক্সারি ব্রাউন টোন */
+        }
+
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--bg-color); 
+            color: #2c2c2c;
+            margin: 0;
+        }
+
+        /* কার্ডের বিশেষ ডিজাইন */
+        .premium-card {
+            background: #ffffff;
+            border: 1px solid #eee5d9;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .premium-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .nav-link {
+            position: relative;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0; height: 1.5px; bottom: -4px; left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after { width: 100%; }
+
+        .btn-premium {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 14px 35px;
+            transition: all 0.3s ease;
+            letter-spacing: 2px;
+        }
+
+        .btn-premium:hover {
+            background-color: var(--accent-color);
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="bg-[#1a1a1a] text-white text-[10px] text-center py-2 tracking-[3px] uppercase">
+        Free Delivery Nationwide on Orders Over ৳2000
+    </div>
+
+    <!-- Header -->
+    <nav class="sticky top-0 z-50 bg-[#fdfbf7]/90 backdrop-blur-md border-b border-[#eee5d9]">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="text-2xl font-black tracking-[4px] text-[#1a1a1a]">NEXABON</div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="https://azimm7337-cmyk.github.io/NexabonFashion/new-arrivals.html" class="nav-link">New Arrivals</a>
+                <a href="https://azimm7337-cmyk.github.io/NexabonFashion/collections.html" class="nav-link">Collections</a>
+                <a href="#" class="nav-link text-red-700">Clearance</a>
+            </div>
+
+            <div class="flex items-center space-x-6 text-sm">
+                <i class="fa-solid fa-magnifying-glass cursor-pointer hover:text-[#c4a484] transition"></i>
+                <div class="relative cursor-pointer group">
+                    <i class="fa-solid fa-cart-shopping hover:text-[#c4a484] transition"></i>
+                    <span class="absolute -top-2 -right-2 bg-[#c4a484] text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-[70vh] flex items-center justify-center overflow-hidden bg-[#ebe7df]">
+        <div class="absolute inset-0">
+            <!-- Sample High Quality Image -->
+            <img src="https://unsplash.com" class="w-full h-full object-cover opacity-70" alt="Banner">
+        </div>
+        <div class="relative text-center px-4">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tighter text-white drop-shadow-2xl">THE MODERN ESSENTIALS</h1>
+            <p class="text-white text-sm md:text-base mb-8 font-bold tracking-[3px] uppercase">Premium Waffle Knit Collection</p>
+            <a href="#collection" class="btn-premium font-bold text-xs uppercase">Shop Collection</a>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="collection" class="max-w-7xl mx-auto py-24 px-6">
+        <div class="flex justify-between items-end mb-16">
+            <div>
+                <h2 class="text-2xl font-extrabold uppercase tracking-[3px]">New Drop</h2>
+                <div class="h-[3px] w-12 bg-[#c4a484] mt-2"></div>
+            </div>
+            <a href="https://azimm7337-cmyk.github.io/NexabonFashion/collections.html" class="text-xs font-bold uppercase tracking-widest border-b border-black pb-1 hover:text-[#c4a484] hover:border-[#c4a484] transition">View All</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            
+            <!-- Product 1 -->
+            <div class="premium-card p-3 group">
+                <div class="relative overflow-hidden aspect-[3/4] bg-[#f9f9f9]">
+                    <img src="https://unsplash.com" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="absolute top-4 right-4">
+                        <span class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest border border-[#eee5d9]">New In</span>
+                    </div>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xs uppercase tracking-[2px] mb-3 text-gray-600">Drop Shoulder - Cream</h3>
+                    <p class="text-[#c4a484] font-extrabold text-lg">৳ ১,৪৫০.০০</p>
+                    <!-- প্রোডাক্ট ১ এর জন্য বাটন -->
+                    <a href="https://azimm7337-cmyk.github.io/NexabonFashion/index.html" target="_blank" class="mt-6 w-full border border-[#1a1a1a] py-3 text-[10px] font-black uppercase tracking-[2px] hover:bg-[#1a1a1a] hover:text-white transition-all duration-300 block text-center">Order Now</a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="premium-card p-3 group">
+                <div class="relative overflow-hidden aspect-[3/4] bg-[#f9f9f9]">
+                    <img src="https://unsplash.com" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xs uppercase tracking-[2px] mb-3 text-gray-600">Waffle Knit - Forest Green</h3>
+                    <p class="text-[#c4a484] font-extrabold text-lg">৳ ১,৬৫০.০০</p>
+                    <!-- প্রোডাক্ট ২ এর জন্য বাটন -->
+                    <a href="https://azimm7337-cmyk.github.io/NexabonFashion/index.html" target="_blank" class="mt-6 w-full border border-[#1a1a1a] py-3 text-[10px] font-black uppercase tracking-[2px] hover:bg-[#1a1a1a] hover:text-white transition-all duration-300 block text-center">Order Now</a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="premium-card p-3 group">
+                <div class="relative overflow-hidden aspect-[3/4] bg-[#f9f9f9]">
+                    <img src="https://unsplash.com" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-[#1a1a1a] text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest">Best Seller</span>
+                    </div>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="font-bold text-xs uppercase tracking-[2px] mb-3 text-gray-600">Oversized Tee - Onyx Black</h3>
+                    <p class="text-[#c4a484] font-extrabold text-lg">৳ ১,৫৫০.০০</p>
+                    <!-- প্রোডাক্ট ৩ এর জন্য বাটন -->
+                    <a href="https://azimm7337-cmyk.github.io/NexabonFashion/index.html" target="_blank" class="mt-6 w-full border border-[#1a1a1a] py-3 text-[10px] font-black uppercase tracking-[2px] hover:bg-[#1a1a1a] hover:text-white transition-all duration-300 block text-center">Order Now</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1a1a1a] text-[#f4f1ea] py-24 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16">
+            <div class="col-span-1 md:col-span-1">
+                <h4 class="text-2xl font-black tracking-[4px] mb-8">NEXABON</h4>
+                <p class="text-gray-500 text-xs leading-[2] tracking-wider uppercase">Premium clothing brand based in Dhaka, focused on minimal design and superior quality.</p>
+            </div>
+            <div>
+                <h5 class="font-bold text-[11px] uppercase tracking-[3px] mb-8 text-[#c4a484]">Quick Links</h5>
+                <ul class="text-gray-400 text-[11px] space-y-4 font-bold uppercase tracking-widest">
+                    <li><a href="#" class="hover:text-white transition">Search</a></li>
+                    <li><a href="#" class="hover:text-white transition">Size Guide</a></li>
+                    <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold text-[11px] uppercase tracking-[3px] mb-8 text-[#c4a484]">Contact Us</h5>
+                <div class="text-gray-400 text-[11px] space-y-3 font-bold uppercase tracking-widest leading-relaxed">
+                    <p>Dhaka, Bangladesh</p>
+                    <p>support@nexabonfashion.com</p>
+                    <p>+880 1XXX XXXXXX</p>
+                </div>
+            </div>
+            <div class="flex space-x-8 text-xl justify-end items-end text-gray-400">
+                <a href="#" class="hover:text-[#c4a484] transition"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-[#c4a484] transition"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-gray-800 text-center">
+            <p class="text-[9px] text-gray-600 uppercase tracking-[4px]">&copy; 2024 Nexabonfashion. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
