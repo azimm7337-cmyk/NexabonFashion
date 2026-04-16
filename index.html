@@ -5,38 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Perfume Offer - Mega Ramadan</title>
 
-  <!-- পূর্ণাঙ্গ এবং সঠিক CSS লিঙ্ক (এই লিঙ্কগুলো ছাড়া ডিজাইন আসবে না) -->
+  <!-- ফিক্সড সিএসএস লিঙ্কসমূহ -->
   <link href="https://jsdelivr.net" rel="stylesheet" />
-  <link href="https://jsdelivr.net" rel="stylesheet" />
-
+  <link rel="stylesheet" href="https://cloudflare.com">
+  
   <style>
-    .select2-container{box-sizing:border-box;display:inline-block;margin:0;position:relative;vertical-align:middle}.select2-container .select2-selection--single{box-sizing:border-box;cursor:pointer;display:block;height:45px;user-select:none;-webkit-user-select:none}.select2-container .select2-selection--single .select2-selection__rendered{display:block;padding-left:12px;line-height:42px;color:#444;}.select2-container--default .select2-selection--single{background-color:#fff;border:1px solid #ddd;border-radius:8px}
+    .select2-container .select2-selection--single { height: 45px; border-radius: 8px; border: 1px solid #ddd; }
+    .select2-container--default .select2-selection--single .select2-selection__rendered { line-height: 42px; padding-left: 12px; }
     
-    body { background-color: #f4f7f6; font-family: 'Segoe UI', sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
-    .luxury-card { width: 100%; max-width: 480px; background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); }
-    .header-section { text-align: center; margin-bottom: 30px; }
-    .header-section h2 { color: #1a5928; font-weight: 700; margin-bottom: 10px; }
-    .form-label { font-weight: 600; color: #333; font-size: 14px; margin-bottom: 8px; display: block; }
-    .form-control { height: 45px; border-radius: 8px; border: 1px solid #ddd; }
-    .btn-submit { background-color: #1a5928; color: white; font-weight: bold; border: none; width: 100%; padding: 14px; border-radius: 8px; font-size: 16px; margin-top: 20px; transition: 0.3s; cursor: pointer; }
-    .btn-submit:hover { background-color: #25D366; transform: translateY(-2px); }
+    body { background-color: #fdfbf7; font-family: 'Plus Jakarta Sans', sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
+    
+    .luxury-card { width: 100%; max-width: 450px; background: #fff; padding: 30px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 1px solid #eee5d9; }
+    
+    /* Homepage Button Style */
+    .home-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #1a5928;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        transition: 0.3s;
+    }
+    .home-link:hover { color: #c4a484; }
+
+    .header-section { text-align: center; margin-bottom: 25px; }
+    .header-section h2 { color: #1a5928; font-weight: 800; margin-bottom: 5px; font-size: 24px; }
+    .form-label { font-weight: 700; color: #444; font-size: 13px; margin-bottom: 8px; display: block; text-transform: uppercase; }
+    .form-control { width: 100%; height: 45px; border-radius: 8px; border: 1px solid #ddd; padding: 0 12px; box-sizing: border-box; }
+    
+    .btn-submit { background-color: #1a5928; color: white; font-weight: bold; border: none; width: 100%; padding: 14px; border-radius: 8px; font-size: 16px; margin-top: 15px; transition: 0.4s; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
+    .btn-submit:hover { background-color: #c4a484; transform: translateY(-2px); }
   </style>
 </head>
 <body>
 
 <div class="luxury-card">
+  <!-- এই লিঙ্কটি আপনার মেইন হোমপেজে নিয়ে যাবে -->
+  <a href="https://github.io" class="home-link">
+    <i class="fa-solid fa-arrow-left"></i> Back to Homepage
+  </a>
+
   <div class="header-section">
     <h2>🌙 রমজান মেগা অফার</h2>
-    <p class="text-muted">আপনার তথ্য দিয়ে অর্ডার সম্পন্ন করুন</p>
+    <p style="color: #888; font-size: 13px;">নিচের ফর্মটি পূরণ করে আপনার অর্ডারটি সম্পন্ন করুন</p>
   </div>
 
-  <!-- Formspree ID এবং Redirect লিঙ্ক একদম সঠিক আছে -->
   <form action="https://formspree.io/f/mvzdzrab" method="POST">
     <input type="hidden" name="_next" value="https://azimm7337-cmyk.github.io/NexabonFashion/thanks.html">
 
-    <div class="mb-3">
+    <div style="margin-bottom: 15px;">
       <label class="form-label">পারফিউম পছন্দ করুন:</label>
-      <select name="Perfume_Choice" id="perfume" class="js-example-basic-single form-control" style="width: 100%;" required>
+      <select name="Perfume_Choice" id="perfume" class="js-example-basic-single" style="width: 100%;" required>
         <option value="">সিলেক্ট করুন...</option>
         <option value="Oud Al Layl">Oud Al Layl - ১২৫০৳</option>
         <option value="Sheikh Al Shuyukh">Sheikh Al Shuyukh - ১৩৫০৳</option>
@@ -44,26 +68,26 @@
       </select>
     </div>
 
-    <div class="mb-3">
+    <div style="margin-bottom: 15px;">
       <label class="form-label">আপনার নাম:</label>
-      <input type="text" name="Customer_Name" class="form-control" placeholder="নাম লিখুন" required>
+      <input type="text" name="Customer_Name" class="form-control" placeholder="আপনার নাম লিখুন" required>
     </div>
 
-    <div class="mb-3">
+    <div style="margin-bottom: 15px;">
       <label class="form-label">মোবাইল নম্বর:</label>
       <input type="tel" name="Phone_Number" class="form-control" placeholder="017XXXXXXXX" required>
     </div>
 
-    <div class="mb-3">
+    <div style="margin-bottom: 15px;">
       <label class="form-label">ঠিকানা:</label>
-      <textarea name="Shipping_Address" class="form-control" rows="3" placeholder="পূর্ণ ঠিকানা লিখুন" required></textarea>
+      <textarea name="Shipping_Address" class="form-control" style="height: 80px; padding-top: 10px;" placeholder="আপনার পূর্ণ ঠিকানা লিখুন" required></textarea>
     </div>
 
-    <button type="submit" class="btn-submit w-100">অর্ডার কনফার্ম করুন</button>
+    <button type="submit" class="btn-submit">অর্ডার কনফার্ম করুন</button>
   </form>
 </div>
 
-<!-- সঠিক এবং পূর্ণাঙ্গ জাভাস্ক্রিপ্ট লিঙ্ক (এগুলো ড্রপডাউন সচল করার জন্য জরুরি) -->
+<!-- ফিক্সড জাভাস্ক্রিপ্ট লিঙ্কসমূহ -->
 <script src="https://jquery.com"></script>
 <script src="https://jsdelivr.net"></script>
 
