@@ -1,27 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ধন্যবাদ - অর্ডার সফল</title>
   
-  <!-- বুটস্ট্র্যাপের সঠিক এবং পূর্ণাঙ্গ লিঙ্ক (গিটহাবের জন্য এটিই লাগবে) -->
+  <!-- বুটস্ট্র্যাপের সঠিক CDN লিঙ্ক -->
   <link href="https://jsdelivr.net" rel="stylesheet">
   
   <style>
-    body { background-color: #f4f7f6; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; margin: 0; font-family: 'Segoe UI', sans-serif; }
-    .thanks-card { background: white; padding: 50px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); max-width: 450px; }
-    .icon { font-size: 60px; color: #1a5928; margin-bottom: 20px; line-height: 1; }
-    .btn-back { background-color: #1a5928; color: white; text-decoration: none; padding: 12px 25px; border-radius: 8px; display: inline-block; margin-top: 20px; font-weight: bold; transition: 0.3s; }
-    .btn-back:hover { background-color: #25D366; color: white; }
+    @import url('https://googleapis.com');
+    
+    body { 
+        background-color: #fdfbf7; 
+        height: 100vh; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        text-align: center; 
+        margin: 0; 
+        font-family: 'Plus Jakarta Sans', sans-serif; 
+    }
+    
+    .thanks-card { 
+        background: white; 
+        padding: 50px; 
+        border-radius: 20px; 
+        box-shadow: 0 15px 35px rgba(0,0,0,0.05); 
+        max-width: 450px; 
+        border: 1px solid #eee5d9;
+    }
+    
+    .icon { 
+        font-size: 70px; 
+        color: #1a5928; 
+        margin-bottom: 20px; 
+        line-height: 1; 
+    }
+    
+    .btn-back { 
+        background-color: #1a5928; 
+        color: white; 
+        text-decoration: none; 
+        padding: 14px 30px; 
+        border-radius: 8px; 
+        display: inline-block; 
+        margin-top: 25px; 
+        font-weight: bold; 
+        transition: 0.3s; 
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 14px;
+    }
+    
+    .btn-back:hover { 
+        background-color: #c4a484; 
+        color: white; 
+        transform: translateY(-2px);
+    }
   </style>
 </head>
 <body>
   <div class="thanks-card">
     <div class="icon">✓</div>
-    <h2 class="fw-bold">অর্ডার সফল হয়েছে!</h2>
-    <p class="text-muted">আপনার তথ্য আমাদের কাছে পৌঁছেছে। খুব শীঘ্রই আমাদের প্রতিনিধি আপনার সাথে যোগাযোগ করবেন।</p>
-    <a href="index.html" class="btn-back">হোম পেজে ফিরে যান</a>
+    <h2 class="fw-bold" style="color: #1a5928;">অর্ডার সফল হয়েছে!</h2>
+    <p class="text-muted mt-3">আপনার তথ্য আমাদের কাছে পৌঁছেছে। খুব শীঘ্রই আমাদের প্রতিনিধি আপনার সাথে ফোন কলের মাধ্যমে যোগাযোগ করবেন।</p>
+    
+    <!-- আপনার কাঙ্ক্ষিত ওয়েবসাইট লিঙ্ক -->
+    <a href="https://azimm7337-cmyk.github.io/NexabonFashion/homepage.html" class="btn-back">হোম পেজে ফিরে যান</a>
   </div>
 </body>
 </html>
