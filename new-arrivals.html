@@ -1,115 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Arrivals | Nexabonfashion</title>
-    <script src="https://tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cloudflare.com">
-    <style>
-        @import url('https://googleapis.com');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fdfbf7; color: #1a1a1a; margin: 0; }
-        
-        .product-img-container img { transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1); }
-        .product-card:hover img { transform: scale(1.08); }
-        
-        /* Button Reveal Animation */
-        .order-btn-overlay {
-            transform: translateY(100%);
-            transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-        }
-        .product-card:hover .order-btn-overlay { transform: translateY(0); }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Arrivals | Nexabonfashion</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #faf8f3;
+    color: #111;
+}
+
+/* Image hover */
+.product-card img {
+    transition: transform 0.8s cubic-bezier(0.19,1,0.22,1);
+}
+.product-card:hover img {
+    transform: scale(1.06);
+}
+
+/* Overlay button */
+.order-btn-overlay {
+    transform: translateY(100%);
+    transition: all 0.4s ease;
+}
+.product-card:hover .order-btn-overlay {
+    transform: translateY(0);
+}
+</style>
 </head>
+
 <body>
 
-    <!-- Nav -->
-    <nav class="bg-[#fdfbf7]/90 backdrop-blur-md sticky top-0 z-50 border-b border-[#eee5d9] py-6 px-8">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="https://azimm7337-cmyk.github.io/NexabonFashion/homepage.html" class="text-[10px] font-bold tracking-[3px] uppercase hover:text-[#c4a484] transition">← Back Home</a>
-            <div class="text-xl font-black tracking-[5px] uppercase">NEXABON</div>
-            <div class="w-20"></div> <!-- Spacer for balance -->
+<!-- NAV -->
+<nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200 py-5 px-6">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a href="#" class="text-xs font-semibold tracking-widest uppercase hover:text-[#c4a484] transition">
+            ← Back Home
+        </a>
+
+        <div class="text-lg font-extrabold tracking-[6px] uppercase">
+            NEXABON
         </div>
-    </nav>
 
-    <!-- Header -->
-    <header class="max-w-7xl mx-auto pt-16 pb-10 px-8 text-center">
-        <h1 class="text-4xl font-extrabold uppercase tracking-[8px] mb-4">New Arrivals</h1>
-        <p class="text-[10px] uppercase tracking-[4px] text-gray-400 font-bold">Limited Edition Drop 2026</p>
-    </header>
+        <div class="w-20"></div>
+    </div>
+</nav>
 
-    <!-- Product Grid -->
-    <section class="max-w-7xl mx-auto py-10 px-8 mb-20">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16"><p></p>
-            
-            <!-- Product 1 -->
-            <div class="product-card group">
-                <div class="product-img-container relative aspect-[3/4] overflow-hidden bg-[#f4f1ea]">
-                    <img src="https://i.postimg.cc/pLmh6sDk/waffle-knit-sand.png" class="w-full h-full object-cover">
-                    
-                    <!-- Link to your other site -->
-                    <div class="absolute bottom-0 left-0 right-0 p-4 order-btn-overlay">
-                        <a href="https://azimm7337-cmyk.github.io/NexabonFashion/index.html" target="_blank" class="w-full bg-white text-black py-4 text-[10px] font-black uppercase tracking-[2px] hover:bg-black hover:text-white transition duration-300 block text-center shadow-2xl">
-                            Purchase Now →
-                        </a>
-                        <span class="text-sm font-black text-[#c4a484]">৳৭৫০</span>
-                    </div>
-                </div>
-                <div class="mt-6 flex justify-between items-start">
-                    <div class="space-y-1">
-                        <h3 class="text-[11px] font-bold uppercase tracking-[2px]">Waffle Knit - Sand</h3>
-                        <p class="text-[9px] text-gray-400 uppercase font-bold tracking-widest">Premium Texture</p>
-                    </div>
-                </div>
-            </div><p></p>
+<!-- HEADER -->
+<header class="max-w-6xl mx-auto pt-16 pb-10 px-6 text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-[6px] mb-3">
+        New Arrivals
+    </h1>
+    <p class="text-xs tracking-[3px] text-gray-400 uppercase">
+        Limited Edition Drop 2026
+    </p>
+</header>
 
-            <!-- Product 2 -->
-            <div class="product-card group">
-                <div class="product-img-container relative aspect-[3/4] overflow-hidden bg-[#f4f1ea]">
-                    <img src="https://i.postimg.cc/CLPn73fW/classic-drop-shoulder.png" class="w-full h-full object-cover">
-                    
-                    <div class="absolute bottom-0 left-0 right-0 p-4 order-btn-overlay">
-                        <a href="আপনার-অর্ডার-পেজ-লিঙ্ক-২" target="_blank" class="w-full bg-white text-black py-4 text-[10px] font-black uppercase tracking-[2px] hover:bg-black hover:text-white transition duration-300 block text-center shadow-2xl">
-                            Purchase Now →
-                        </a>
-                        <span class="text-sm font-black text-[#c4a484]">৳৬০০</span>
-                    </div>
-                </div>
-                <div class="mt-6 flex justify-between items-start">
-                    <div class="space-y-1">
-                        <h3 class="text-[11px] font-bold uppercase tracking-[2px]">Classic Drop Shoulder</h3>
-                        <p class="text-[9px] text-gray-400 uppercase font-bold tracking-widest">Minimalist Fit</p>
-                    </div>
-                </div>
-            </div><p></p>
+<!-- PRODUCTS -->
+<section class="max-w-6xl mx-auto px-6 pb-20">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
-            <!-- Product 3 -->
-            <div class="product-card group">
-                <div class="product-img-container relative aspect-[3/4] overflow-hidden bg-[#f4f1ea]">
-                    <img src="https://i.postimg.cc/tCSnkKV8/oversized-tee-onyx.jpg" class="w-full h-full object-cover">
-                    
-                    <div class="absolute bottom-0 left-0 right-0 p-4 order-btn-overlay">
-                        <a href="আপনার-অর্ডার-পেজ-লিঙ্ক-৩" target="_blank" class="w-full bg-white text-black py-4 text-[10px] font-black uppercase tracking-[2px] hover:bg-black hover:text-white transition duration-300 block text-center shadow-2xl">
-                            Purchase Now →
-                            <span class="text-sm font-black text-[#c4a484]">৳৬০০</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="mt-6 flex justify-between items-start">
-                    <div class="space-y-1">
-                        <h3 class="text-[11px] font-bold uppercase tracking-[2px]">Oversized Tee - Onyx</h3>
-                        <p class="text-[9px] text-gray-400 uppercase font-bold tracking-widest">Heavyweight Cotton</p>
-                    </div>
+        <!-- PRODUCT 1 -->
+        <div class="product-card group">
+            <div class="relative overflow-hidden rounded-2xl bg-[#f4f1ea] shadow-sm">
+                <img src="https://i.postimg.cc/pLmh6sDk/waffle-knit-sand.png" class="w-full h-full object-cover">
+
+                <div class="absolute bottom-0 left-0 right-0 p-4 order-btn-overlay">
+                    <a href="https://azimm7337-cmyk.github.io/NexabonFashion/index.html" class="block text-center bg-black text-white py-3 text-xs font-bold tracking-widest rounded-lg hover:bg-[#c4a484] transition">
+                        Purchase Now →
+                    </a>
                 </div>
             </div>
 
-        </div><p></p>
-    </section>
+            <div class="mt-4 flex justify-between items-center">
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wide">
+                        Waffle Knit - Sand
+                    </h3>
+                    <p class="text-xs text-gray-400 uppercase">
+                        Premium Texture
+                    </p>
+                </div>
+                <span class="text-sm font-bold text-[#c4a484]">
+                    ৳৭৫০
+                </span>
+            </div>
+        </div>
 
-    <!-- Footer -->
-    <footer class="border-t border-[#eee5d9] py-12 text-center text-gray-400 text-[9px] tracking-[3px] uppercase">
-        &copy; 2026 NEXABON FASHION BANGLADESH
-    </footer>
+        <!-- PRODUCT 2 -->
+        <div class="product-card group">
+            <div class="relative overflow-hidden rounded-2xl bg-[#f4f1ea] shadow-sm">
+                <img src="https://i.postimg.cc/CLPn73fW/classic-drop-shoulder.png" class="w-full h-full object-cover">
+
+                <div class="absolute bottom-0 left-0 right-0 p-4 order-btn-overlay">
+                    <a href="https://azimm7337-cmyk.github.io/NexabonFashion/index.html" class="block text-center bg-black text-white py-3 text-xs font-bold tracking-widest rounded-lg hover:bg-[#c4a484] transition">
+                        Purchase Now →
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-4 flex justify-between items-center">
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wide">
+                        Classic Drop Shoulder
+                    </h3>
+                    <p class="text-xs text-gray-400 uppercase">
+                        Minimalist Fit
+                    </p>
+                </div>
+                <span class="text-sm font-bold text-[#c4a484]">
+                    ৳৬০০
+                </span>
+            </div>
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="product-card group">
+            <div class="relative overflow-hidden rounded-2xl bg-[#f4f1ea] shadow-sm">
+                <img src="https://i.postimg.cc/tCSnkKV8/oversized-tee-onyx.jpg" class="w-full h-full object-cover">
+
+                <div class="absolute bottom-0 left-0 right-0 p-4 order-btn-overlay">
+                    <a href="https://azimm7337-cmyk.github.io/NexabonFashion/index.html" class="block text-center bg-black text-white py-3 text-xs font-bold tracking-widest rounded-lg hover:bg-[#c4a484] transition">
+                        Purchase Now →
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-4 flex justify-between items-center">
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wide">
+                        Oversized Tee - Onyx
+                    </h3>
+                    <p class="text-xs text-gray-400 uppercase">
+                        Heavyweight Cotton
+                    </p>
+                </div>
+                <span class="text-sm font-bold text-[#c4a484]">
+                    ৳৬০০
+                </span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-gray-200 py-10 text-center text-gray-400 text-xs tracking-widest uppercase">
+    © 2026 Nexabon Fashion Bangladesh
+</footer>
 
 </body>
 </html>
