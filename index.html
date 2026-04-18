@@ -3,101 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nexabon fashion order page</title>
+  <title>Nexabon Fashion | Order Page</title>
 
-  <!-- ফিক্সড সিএসএস লিঙ্কসমূহ -->
-  <link href="https://jsdelivr.net" rel="stylesheet" />
+  <!-- ফিক্স ১: ভুল লিঙ্কগুলো সরিয়ে সঠিক ডাইরেক্ট লিঙ্ক দেওয়া হয়েছে -->
+  <link href="https://googleapis.com" rel="stylesheet">
   <link rel="stylesheet" href="https://cloudflare.com">
   
   <style>
-    .select2-container .select2-selection--single { height: 45px; border-radius: 8px; border: 1px solid #ddd; }
-    .select2-container--default .select2-selection--single .select2-selection__rendered { line-height: 42px; padding-left: 12px; }
+    :root {
+        --primary-color: #1a5928;
+        --accent-color: #c4a484;
+        --bg-color: #fdfbf7;
+    }
+
+    body { 
+        background-color: var(--bg-color); 
+        font-family: 'Plus Jakarta Sans', sans-serif; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        min-height: 100vh; 
+        margin: 0; 
+        padding: 20px; 
+    }
     
-    body { background-color: #fdfbf7; font-family: 'Plus Jakarta Sans', sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
+    .luxury-card { 
+        width: 100%; 
+        max-width: 420px; 
+        background: #fff; 
+        padding: 35px; 
+        border-radius: 20px; 
+        box-shadow: 0 10px 40px rgba(0,0,0,0.03); 
+        border: 1px solid #eee5d9; 
+    }
     
-    .luxury-card { width: 100%; max-width: 450px; background: #fff; padding: 30px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 1px solid #eee5d9; }
-    
-    /* Homepage Button Style */
     .home-link {
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        color: #1a5928;
+        color: var(--primary-color);
         text-decoration: none;
-        font-size: 12px;
+        font-size: 11px;
         font-weight: 800;
         text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 20px;
+        letter-spacing: 1.5px;
+        margin-bottom: 25px;
         transition: 0.3s;
     }
-    .home-link:hover { color: #c4a484; }
+    .home-link:hover { color: var(--accent-color); transform: translateX(-5px); }
 
     .header-section { text-align: center; margin-bottom: 25px; }
-    .header-section h2 { color: #1a5928; font-weight: 800; margin-bottom: 5px; font-size: 24px; }
-    .form-label { font-weight: 700; color: #444; font-size: 13px; margin-bottom: 8px; display: block; text-transform: uppercase; }
-    .form-control { width: 100%; height: 45px; border-radius: 8px; border: 1px solid #ddd; padding: 0 12px; box-sizing: border-box; }
+    .header-section h2 { color: var(--primary-color); font-weight: 800; margin: 0; font-size: 26px; }
     
-    .btn-submit { background-color: #1a5928; color: white; font-weight: bold; border: none; width: 100%; padding: 14px; border-radius: 8px; font-size: 16px; margin-top: 15px; transition: 0.4s; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
-    .btn-submit:hover { background-color: #c4a484; transform: translateY(-2px); }
+    .form-label { font-weight: 700; color: #444; font-size: 11px; margin-top: 15px; display: block; text-transform: uppercase; letter-spacing: 1px; }
+    
+    .form-control { 
+        width: 100%; 
+        border-radius: 10px; 
+        border: 1px solid #ddd; 
+        padding: 12px; 
+        font-size: 14px; 
+        box-sizing: border-box; 
+        background: #fafafa;
+        margin-top: 5px;
+        transition: 0.3s;
+    }
+    
+    .form-control:focus { outline: none; border-color: var(--accent-color); background: #fff; }
+    
+    .btn-submit { 
+        background-color: var(--primary-color); 
+        color: white; 
+        font-weight: 800; 
+        border: none; 
+        width: 100%; 
+        padding: 16px; 
+        border-radius: 12px; 
+        font-size: 15px; 
+        margin-top: 20px; 
+        cursor: pointer; 
+        text-transform: uppercase; 
+        letter-spacing: 1px;
+        transition: 0.3s;
+    }
+    .btn-submit:hover { background-color: var(--accent-color); }
+    .btn-submit:disabled { background-color: #ccc; cursor: not-allowed; }
   </style>
 </head>
 <body>
 
 <div class="luxury-card">
-  <!-- এই লিঙ্কটি আপনার মেইন হোমপেজে নিয়ে যাবে -->
   <a href="https://azimm7337-cmyk.github.io/NexabonFashion/homepage.html" class="home-link">
     <i class="fa-solid fa-arrow-left"></i> Back to Homepage
   </a>
 
   <div class="header-section">
     <h2>মেগা অফার</h2>
-    <p style="color: #888; font-size: 13px;">নিচের ফর্মটি পূরণ করে আপনার অর্ডারটি সম্পন্ন করুন</p>
+    <p style="color: #888; font-size: 12px;">অর্ডারটি সম্পন্ন করতে সঠিক তথ্য দিন</p>
   </div>
 
-   <form action="https://formspree.io/f/mvzdzrab" method="POST">
-    <input type="hidden" name="_next" value="https://azimm7337-cmyk.github.io/NexabonFashion/thanks.html">
-  
-    <div style="margin-bottom: 15px;">
-      <label class="form-label">প্রোডাক্ট পছন্দ করুন:</label>
-      <select name="Product_Choice" id="product" class="js-example-basic-single" style="width: 100%;" required>
-        <option value="">সিলেক্ট করুন...</option>
-        <option value="Drop shoulder">Drop shoulder - ৫০০৳</option>
-        <option value="Waffle Knit">Waffle Knit - ৬৫০৳</option>
-        <option value="Oversized Tee">Oversized Tee - ৫০০৳</option>
-      </select>
-    </div>
+  <form name="submit-to-google-sheet">
+    <label class="form-label">প্রোডাক্ট পছন্দ করুন:</label>
+    <select name="Product_Choice" class="form-control" required>
+      <option value="">সিলেক্ট করুন...</option>
+      <option value="Drop shoulder">Drop shoulder - ৫০০৳</option>
+      <option value="Waffle Knit">Waffle Knit - ৬৫০৳</option>
+      <option value="Oversized Tee">Oversized Tee - ৫০০৳</option>
+    </select>
 
-    <div style="margin-bottom: 15px;">
-      <label class="form-label">আপনার নাম:</label>
-      <input type="text" name="Customer_Name" class="form-control" placeholder="আপনার নাম লিখুন" required>
-    </div>
+    <label class="form-label">আপনার নাম:</label>
+    <input type="text" name="Customer_Name" class="form-control" placeholder="নাম লিখুন" required>
 
-    <div style="margin-bottom: 15px;">
-      <label class="form-label">মোবাইল নম্বর:</label>
-      <input type="tel" name="Phone_Number" class="form-control" placeholder="017XXXXXXXX" required>
-    </div>
+    <label class="form-label">মোবাইল নম্বর:</label>
+    <input type="tel" name="Phone_Number" class="form-control" placeholder="017XXXXXXXX" required>
 
-    <div style="margin-bottom: 15px;">
-      <label class="form-label">ঠিকানা:</label>
-      <textarea name="Shipping_Address" class="form-control" style="height: 80px; padding-top: 10px;" placeholder="আপনার পূর্ণ ঠিকানা লিখুন" required></textarea>
-    </div>
+    <label class="form-label">ঠিকানা:</label>
+    <textarea name="Shipping_Address" class="form-control" style="height: 70px; resize: none;" placeholder="আপনার পূর্ণ ঠিকানা" required></textarea>
 
-    <button type="submit" class="btn-submit">অর্ডার কনফার্ম করুন</button>
+    <button type="submit" id="submitBtn" class="btn-submit">অর্ডার কনফার্ম করুন</button>
   </form>
 </div>
 
-<!-- ফিক্সড জাভাস্ক্রিপ্ট লিঙ্কসমূহ -->
-<script src="https://jquery.com"></script>
-<script src="https://jsdelivr.net"></script>
-
 <script>
-  $(document).ready(function() {
-    $('.js-example-basic-single').select2({
-        placeholder: "সিলেক্ট করুন...",
-        allowClear: true
+  // আপনার Google Apps Script URL
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbx-LYxlKVyJHnHL_l5vVDSEo5zGwL7wg8daAEcj9VA2kLaameHEPXkVE8vYMyln1NOW/exec'; 
+  const form = document.forms['submit-to-google-sheet'];
+  const btn = document.getElementById('submitBtn');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> প্রসেসিং...';
+
+    // অ্যাসিঙ্ক্রোনাস ডাটা পাঠানো
+    fetch(scriptURL, { 
+      method: 'POST', 
+      body: new FormData(form),
+      mode: 'no-cors' // দ্রুত কানেকশন শেষ করতে সাহায্য করে
     });
+
+    // ০.৮ সেকেন্ডের মধ্যে থ্যাঙ্ক ইউ পেজে পাঠিয়ে দেবে
+    setTimeout(() => {
+        window.location.href = "https://azimm7337-cmyk.github.io/NexabonFashion/thanks.html";
+    }, 800); 
   });
 </script>
+
 </body>
 </html>
